@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UsersModule } from './users/users.module';
 import { ServersModule } from './servers/servers.module';
 import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
