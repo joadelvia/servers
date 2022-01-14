@@ -1,3 +1,7 @@
+<div *ngIf="!allowEdit" class="alert alert-warning" role="alert">
+  You are not allowed to edit!
+</div>
+<div *ngIf="allowEdit">
 <div class="form-group">
     <label for="name">Server Name</label>
     <input type="text" id="name" class="form-control" [(ngModel)]="serverName">
@@ -10,3 +14,4 @@
     </select>
   </div>
   <button class="btn btn-primary" (click)="onUpdateServer()">Update Server</button>
+</div>
