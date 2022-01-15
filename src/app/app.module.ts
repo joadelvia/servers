@@ -8,6 +8,9 @@ import { ServersModule } from './servers/servers.module';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard';
+import { ServersService } from './servers/servers.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     UsersModule,
     ServersModule
   ],
-  providers: [],
+  providers: [AuthService,AuthGuard, ServersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
